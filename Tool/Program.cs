@@ -4,17 +4,18 @@ namespace Tool {
 
     class Program {
 
-        static void Main(string[] args) {
+        static int Main(string[] args) {
 
             try {
 
-                IoC.Initialize()
+                return IoC.Initialize()
                     .GetInstance<IExecutor>()
                     .Execute(args);
 
             } catch (Exception e) {
 
                 Console.WriteLine(e.Message);
+                return 1;
 
             }
         }

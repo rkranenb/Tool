@@ -16,7 +16,7 @@ namespace Tool.Commands.Source {
         }
 
         public int Execute(IEnumerable<string> args) {
-            var format = "{0}: {1}\nAddress: {2}";
+            var format = "{0}: {1}\nAddress: {2}\n";
             sourcesQuery.Execute()
                 .Each(x => Console.WriteLine(format, x.Name, x.Description, x.Address));
             return 0;

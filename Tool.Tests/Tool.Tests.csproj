@@ -76,6 +76,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Commands\Import\ImportCommandTests.cs" />
     <Compile Include="Data\ConnectionFactoryTests.cs" />
     <Compile Include="Data\ConnectionStringProviderTests.cs" />
     <Compile Include="ExecutorTests.cs" />
