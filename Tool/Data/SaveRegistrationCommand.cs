@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using System;
+using Dapper;
 
 namespace Tool.Data {
 
@@ -26,5 +27,13 @@ namespace Tool.Data {
                 connection.Execute(SQL, args);
             }
         }
+
     }
+
+    public class OutputRegistrationCommand : ISaveRegistrationCommand {
+        public void Execute(Registration arg) {
+            Console.WriteLine("{0}, {1}", arg.Name, arg.Email);
+        }
+    }
+
 }
