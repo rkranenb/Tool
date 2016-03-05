@@ -15,7 +15,7 @@ namespace Tool {
                     scan.AddAllTypesOf<ICommand>();
                     scan.AddAllTypesOf<ISourceCommandAction>();
                 });
-                //registry.For<IRegistrationsQuery>().Use<FileRegistrationsQuery>();
+                registry.For<IRegistrationsQuery>().Use<FileRegistrationsQuery>();
             });
         }
 
