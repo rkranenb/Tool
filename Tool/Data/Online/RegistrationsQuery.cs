@@ -35,4 +35,11 @@ namespace Tool.Data.Online {
 
         }
     }
+
+    public class NullRegistrationsQuery : IRegistrationsQuery {
+
+        public IEnumerable<Registration> Execute(Source args) {
+            return null;
+        }
+    }
 }
