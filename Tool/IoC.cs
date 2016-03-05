@@ -16,12 +16,10 @@ namespace Tool {
                     scan.AddAllTypesOf<ICommand>();
                     scan.AddAllTypesOf<ISourceCommandAction>();
                 });
-<<<<<<< HEAD
-                registry.For<IRegistrationsQuery>().Use<FileRegistrationsQuery>();
-                registry.For<ISaveRegistrationCommand>().Use<OutputRegistrationCommand>();
-=======
+
                 registry.For<IRegistrationsQuery>().Use<NullRegistrationsQuery>();
->>>>>>> master
+                registry.For<ISaveRegistrationCommand>().Use<OutputRegistrationCommand>();
+
             });
         }
 

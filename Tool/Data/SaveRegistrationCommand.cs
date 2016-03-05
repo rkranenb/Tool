@@ -30,8 +30,7 @@ namespace Tool.Data {
 
     }
 
-    public class OutputRegistrationCommand : ISaveRegistrationCommand
-    {
+    public class OutputRegistrationCommand : ISaveRegistrationCommand {
         public void Execute(Registration arg) {
             Console.WriteLine("{0}, {1}", arg.Name, arg.Email);
         }
