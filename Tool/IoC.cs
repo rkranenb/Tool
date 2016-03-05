@@ -1,6 +1,7 @@
 ﻿using StructureMap;
 using StructureMap.Graph;
 using Tool.Commands.Source;
+using Tool.Data;
 using Tool.Data.Online;
 
 namespace Tool {
@@ -16,6 +17,7 @@ namespace Tool {
                     scan.AddAllTypesOf<ISourceCommandAction>();
                 });
                 registry.For<IRegistrationsQuery>().Use<FileRegistrationsQuery>();
+                registry.For<ISaveRegistrationCommand>().Use<OutputRegistrationCommand>();
             });
         }
 
